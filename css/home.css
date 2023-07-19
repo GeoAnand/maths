@@ -1,0 +1,784 @@
+.p1 {
+    margin-top: 5%;
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+}
+.p2 {
+    margin-top: -5%;
+    line-height: 3;
+    font-size: 20px;
+    color: black;
+}
+
+.red_bar{
+    border-left: .7rem solid #A00E09;
+    padding-left: 1rem;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 90%;
+}
+.header1 .container{
+  width: 85%
+}
+/* customized nav css */
+.header2-area nav#desktop-nav > ul > li ul {
+  left: 0 !important;
+  margin-top: 7%;
+  width: 300px !important;
+}
+
+nav#desktop-nav ul li > ul > li {
+    border-bottom: 1px solid grey !important;
+}
+
+nav#desktop-nav ul li ul a:hover {
+  color: #000000;
+  background: #d4d4d4;
+  transition: 0.1s;
+}
+
+
+nav#desktop-nav li.has-child-menu > ul.thired-level {
+  position: absolute;
+  left: 100% !important;
+  top: 0;
+  opacity: 0;
+  transform: scaleY(0);
+  margin-left:2%;
+  transform-origin: 0 0 0;
+  transition: all 0.5s ease 0s;
+}
+
+nav#desktop-nav ul li a {
+   font-size: 20px !important;
+}
+
+nav#desktop-nav ul li ul a {
+  font-size: 18px !important;
+}
+
+nav#desktop-nav li.has-child-menu1 > a:after{
+  margin-left: 10px !important;
+}
+
+/* nav#desktop-nav ul li {
+  margin-right: 2% !important;
+} */
+
+.horizontal {
+
+    border: solid 0.8px black;
+    margin: 0% -6% 0% -6%;
+    opacity: 1;
+}
+.imgg_style {
+    margin: 20;
+    width: 350px;
+    height: 233px;
+}
+
+.justify_content_centre {
+    /* position: absolute;
+    left: 1%;
+    top: 32%; */
+    font-size: 24px;
+    text-align: center;
+    color: A00E09;
+    font-weight: 600;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#message_department p{
+  font-size: 21px;
+  font-family: lato; 
+  text-align: justify;
+}
+#about_department p{
+  font-size: 21px;
+  font-family: lato; 
+  text-align: justify;
+}
+.thumbnail {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    min-width: 40%;
+    border-radius: 5px;
+  }
+ 
+  .thumbnail-description {
+    min-height: 40px;
+  }
+ 
+  .thumbnail:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+  }
+ 
+  #numbers p{
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  #numbers h1{
+    color: #A00E09;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  #numbers .numbers {
+    margin-left: 3%
+  }
+
+  #about_department .box {
+    background-size: 200% 200%;
+    color:black;
+    outline:none;
+    font-size: 18px;
+    width: 100%;
+    margin: 2% 0% 2% 0%;
+    height: 8%;
+    border: 2px solid #A00E09 !important;
+    background-image: linear-gradient(to right, white 50%, #A00E09 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+}
+
+#about_department .box:hover {
+  background-position: -100% -100%;
+  color:white
+}
+
+.fit-image{
+  width: 100%;
+  object-fit: cover;
+  height: 300px; /* only if you want fixed height */
+  }
+
+  .form-box
+  {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    left: 25%;
+    height: 250px;
+    background-color: rgba(255,255,255,0.7);
+    z-index: 10;
+    padding-top: 40px;
+    width: 50%;
+  }  
+
+  .professor-box{
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    left: 25%;
+    height: 300px;
+    background-color: rgba(255,255,255,0.7);
+    z-index: 10;
+    width: 50%;
+  }
+
+  /* #services .msg_banner:hover{
+    color:white;
+    background-color: rgba(255,0,0,0.7);
+  } */
+
+  .msg_banner {
+    margin-bottom:30px;
+  }
+
+    /* .msg_banner:hover :nth-child(1) {
+    display: none
+  } */
+  
+  .msg_banner .box {
+    text-align:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    height:280px;
+    position:relative;
+    overflow:hidden;
+  }
+  
+  .msg_banner .cover {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(250,0,0,0.6);
+    transition:opacity 0.15s ease-in;
+    opacity:0;
+    padding-top:80px;
+    color:#fff;
+    /* text-shadow:1px 1px 1px rgba(0,0,0,0.15); */
+  }
+
+  /* .msg_banner:hover :nth-child(1) {
+    display: none
+  } */
+  
+  .msg_banner:hover .cover {
+    opacity:1;
+  }
+  
+  .msg_banner .name {
+    font-weight:bold;
+    margin-bottom:8px;
+  }
+  
+  .msg_banner .title {
+    text-transform:uppercase;
+    font-weight:bold;
+    color:#bbd8fb;
+    letter-spacing:2px;
+    font-size:13px;
+    margin-bottom:20px;
+  }
+  .mobile-search{
+    width: 75%;
+    margin-left: 7%;
+    margin-right: 5%;
+    margin-top: 2%;
+  }
+  #events .card{
+    margin: 4% 0px 0px 13%;
+  }
+  .hover-effect .card-body p{
+    font-size:20px;
+    margin-top: 3%;
+    font-weight:500
+  }
+  .hover-effect .card-body a{
+    font-size:16px
+  }
+#faculty{
+  /* background-image: url("imgg/Rectangle 126.png"); */
+    height: 600px;
+    padding: 100px 0 115px;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#faculty h1{
+  font-size: 32px;
+}
+#faculty p{
+  font-size: 20px;
+}
+#faculty h5{
+  font-size: 20px;
+  padding-left: 5%;
+}
+#student h1{
+  font-size: 32px;
+}
+#student p{
+  font-size: 20px;
+}
+#student h5{
+  font-size: 20px;
+  padding-left: 5%;
+}
+#student{
+  height: 450px;
+  padding: 100px 0 115px;
+  position:relative;    
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#numbers{
+  height: 500px;
+  padding: 100px 0 115px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+  .hover-effect .card-body{
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
+
+  .hover-effect .card-body:hover{
+    top: -10px;
+  }
+
+  .hover-effect .card-body:hover p,
+  .hover-effect .card-body:hover a{
+    color: #A00E09
+  }
+
+  #footer {
+    position: relative;
+    background-color: #33110E;
+    color: white !important;
+    Height: auto;
+ }
+ #footer h5{
+  color: white !important;
+ }
+ #footer .btn{
+  border-radius: 0px !important;
+  font-size: 30px !important
+}
+.hr1{
+  border: solid 1px white;
+  opacity: 2;
+  position: absolute;
+  bottom: 80%;
+  width: 97%;
+  margin-left: 1%;
+}
+
+  .social-media{
+    display: flex;
+    position: absolute;
+    border: solid 1px white;
+    padding: 5px;
+    background: #33110e;
+ }
+ .social{
+    position: absolute;
+    top: 10%;
+    bottom: 90%;
+    right: 35%;
+    left: 35%;
+ }
+ #footer-r1 h1{
+  font-size: 60px;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+}
+
+#footer-r1 p{
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+}
+
+#footer-r1 h5{
+  color: grey !important;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: left;
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .social-media{
+    display: flex;
+    position: absolute;
+    border: solid 1px white;
+    padding: 5px;
+    background: #33110e;
+ }
+ .social{
+    position: absolute;
+    top: 10%;
+    bottom: 90%;
+    right: 35%;
+    left: 35%;
+ }
+ #footer-r1 h1{
+  font-size: 60px;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+}
+.header1 .container{
+  width: 92%
+}
+#footer-r1 p{
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+}
+
+#footer-r1 h5{
+  color: grey !important;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: left;
+}
+}
+
+ @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .social-media {
+    display: flex;
+    position: absolute;
+    border: solid 1px white;
+    padding: 5px;
+    background: #33110e;
+  }
+  #footer .btn{
+    border-radius: 0px !important;
+    font-size: 12px !important
+  }
+  .social{
+    position: absolute;
+    top: 1%;
+    bottom: 100%;
+    right: 23%;
+    left: 23%;
+  }
+  #footer-r1 h1{
+    font-size: 32px;
+    color: white;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  #footer-r1 p{
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  #footer-r1 h5{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+}
+
+/* For Tablet View changed*/   
+@media screen and (min-device-width: 768px)
+    and (max-device-width: 992px) {
+      .social-media {
+        display: flex;
+        border: solid 1px white;
+        padding: 5px;
+        background: #33110e;
+    }
+    #footer .btn{
+      border-radius: 0px !important;
+      font-size: 20px !important
+    }
+    .social{
+      position: absolute;
+      top: 2%;
+      bottom: 90%;
+      right: 30%;
+      left: 30%;
+    }
+
+    #footer-r1 h1{
+      font-size: 32px;
+      color: white;
+      font-weight: 400;
+      text-align: left;
+    }
+    
+    #footer-r1 p{
+      font-size: 16px;
+      color: white;
+      font-weight: 400;
+      text-align: left;
+    }
+    
+    #footer-r1 h5{
+      font-size: 20px;
+      font-weight: 400;
+      text-align: left;
+    }
+    .red_bar{
+      font-size: 30px;
+    }
+    #student h1{
+      margin: -10% !important;
+    }
+    .numbers h1{
+      font-size: 40px !important;
+    }
+    .numbers p{
+      font-size: 20px !important;
+    }
+    #about_department button{
+      font-size: 14px !important;
+    }
+}
+
+ 
+/* For Mobile Phones Portrait or Landscape View changed*/
+@media screen
+    and (max-device-width: 640px) {
+      .social-media {
+        display: flex;
+        position: absolute;
+        border: solid 1px white;
+        padding: 5px;
+        background: #33110e;
+    }
+    #message_department p{
+      font-size: 18px;
+    }
+    #about_department p{
+      font-size: 18px;
+    }
+    #footer .btn{
+      border-radius: 0px !important;
+      font-size: 10px !important
+    }
+    .social{
+      position: absolute;
+      top: 0%;
+      bottom: 100%;
+      right: 19%;
+      left: 19%;
+    }
+    #footer-r1 h1,
+    #footer-r1 p,
+    #footer-r1 h5{
+      text-align: left !important;
+      font-size: 14px !important;
+    }
+    #mob-header p{
+      font-size: 10px;
+      font-weight: 500;
+    }
+    #numbers{
+      height: 350px !important;
+    }
+    .numbers h1{
+      font-size: 22px !important;
+    }
+    .numbers p{
+      font-size: 8px !important;
+    }
+    #faculty{
+      height: 350px !important;
+    }
+    #faculty h1{
+      font-size: 18px;
+    }
+    #faculty p{
+      font-size: 10px;
+    }
+    #faculty h5{
+      font-size: 10px;
+      padding-left: 5%;
+    }
+    .mean-nav .input-group .form-control {
+      width: 92%;
+    }
+    .red_bar{
+      font-size: 24px;
+    }
+    #student h1{
+      font-size: 18px;
+    }
+    #student p{
+      font-size: 10px;
+    }
+    #student h5{
+      font-size: 10px;
+      padding-left: 5%;
+    }
+    .professor-box{
+      height: 190px !important;
+      top: 33%;
+      right: 13%;
+      left: 13%;
+      width: 75%;
+    }
+    .form-box{
+      height: 190px !important;
+      top: 33%;
+      right: 13%;
+      left: 13%;
+      width: 75%;
+    }
+    /* .research_container .res{
+      margin-left: 5% !important
+    } */
+    #about_department .res{
+      margin-left: 10% !important
+    }
+    #faculty h1{
+      margin-top: -10% !important
+    }
+    #student h1{
+      margin-top: -14% !important
+    }
+    .professor-box p,
+    .professor-box h5{
+      font-size: 10px;
+    }
+    #events .card{
+      margin: 4% 0px 0px 1%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px)  {
+  .social {
+    position: absolute;
+    top: 5%;
+    right: 36%;
+    left: 36%;
+}
+#footer-r1 h1,
+#footer-r1 p,
+#footer-r1 h5{
+  text-align: left !important;
+  font-size: 14px !important;
+}
+#footer .btn{
+  border-radius: 0px !important;
+  font-size: 12px !important
+}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .social {
+    position: absolute;
+    top: 7%;
+    right: 35%;
+    left: 35%;
+}
+.header1 .container{
+  width: 92%
+}
+#footer-r1 h1,
+#footer-r1 p,
+#footer-r1 h5{
+  text-align: left !important;
+  font-size: 30px !important;
+}
+#footer .btn{
+  border-radius: 0px !important;
+  font-size: 25px !important
+}
+}
+
+
+/* Media query for galaxy Galaxy fold */
+@media (min-width: 280px) and (max-width: 320px) { 
+  .social {
+    position: absolute;
+    top: 1%;
+    bottom: 100%;
+    right: 13%;
+    left: 13%;
+}
+#footer .btn{
+  border-radius: 0px !important;
+  font-size: 5px !important
+}
+#footer-r1 h1, #footer-r1 p, #footer-r1 h5 {
+  text-align: left !important;
+  font-size: 9px !important;
+}
+#footer-r2 p {
+  font-size: 9px !important;
+}
+#faculty h1{
+  font-size: 18px;
+}
+#faculty p{
+  font-size: 10px;
+}
+#faculty h5{
+  font-size: 10px;
+  padding-left: 5%;
+}
+#student h1{
+  font-size: 18px;
+}
+#student p{
+  font-size: 10px;
+}
+#student h5{
+  font-size: 10px;
+  padding-left: 5%;
+}
+.research_container .res{
+  width: 270px !important;
+}
+
+#news .event-btn-holder a{
+  margin: 5% 50% !important;
+}
+.mean-nav .input-group .form-control {
+  width: 86%;
+}
+}
+
+/* surfave dio media query */
+/* @media (min--moz-device-pixel-ratio: 1.5),
+       (-o-min-device-pixel-ratio: 3/2),
+       (-webkit-min-device-pixel-ratio: 1.5),
+       (min-device-pixel-ratio: 1.5),
+       (min-resolution: 144dpi),
+       (min-resolution: 1.5dppx) and 
+       (min-width: 1500px) and (max-width : 2000px) {
+            .social{ 
+                position: absolute;
+                top: 0%;
+                bottom: 100%;
+                right: 25%;
+                left: 26%;
+            }
+       } */
+#services .box,
+#services .our-services{
+   border-radius: 10px !important;
+}
+
+/* .background_img_services{
+  width: 350px !important;
+  height: 233px; 
+  padding: 0px;
+  margin: 1%;
+} */
+
+
+#services .box {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(222,222,222,.7);
+  color: red;
+}
+
+#services .our-services {
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: table;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 25px 0 rgba(20, 27, 202, 0.17);
+}
+#services .our-services:hover h4,
+#services .our-services:hover p {
+  color: #fff;
+}
+#services .settings:hover {
+  cursor: pointer;
+  background-color:rgba(112, 7, 7, 0.8);
+  transition:opacity 0.15s ease-in;
+
+}
+
+
+
+ 

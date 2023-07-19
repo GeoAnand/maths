@@ -1,0 +1,278 @@
+html,body{
+/* background-image: url('login.jpg'); */
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Lato', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+/*background-color: #FFC312;*/
+background-color: #ed3338;
+/*color: black;*/
+color: #fff;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+/* color: black;
+background-color: #FFC312; */
+color:  #fff;
+background-color: #ed3338;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+/* custom-form */
+/* My Account */
+.account-form{
+	display:flex;
+	width: 100%;
+	position: relative;
+}
+.account-head{
+	position: sticky;
+	left:0;
+	top:0;
+	z-index: 1;
+	width: 500px;
+	min-width: 500px;
+	height: 100vh;
+	background-position: center;
+	text-align: center;
+	align-items: center;
+	display: flex;
+	vertical-align: middle;
+}
+.account-head a{
+	display:block;
+	width:100%;
+}
+.account-head:after{
+	opacity:0.9;
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:-1;
+	width:100%;
+	height:100%;
+	background: #ff5e14; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #ff5e14 0%, #ff8e14 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #ff5e14 0%,#ff8e14 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #a00e095d 0%,#a00e09 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5e14', endColorstr='#ff8e14',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.account-form-inner {
+    width: 100%;
+	align-self: center;
+}
+.account-container {
+    max-width: 400px;
+	margin: auto;
+	padding: 30px 0;	
+}
+.custom-control-label:before{
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	border: 2px solid var(--primary);
+	top: 2px;
+}
+.custom-control-label:after{
+	width: 20px;
+	height: 20px;
+	top: 2px;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+	background-color: var(--primary);
+}
+.account-container .form-forget{
+	display:flex;
+}
+.account-container .form-forget .custom-control-label{
+	font-weight:400;
+}
+.account-container .btn.button-md{
+	padding: 12px 40px;
+    background-color: #A00e09;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+.account-container .btn.button-md:hover{
+    color: #030303;
+    background-color: #f7b205;
+}
+.account-container .form-control{
+	border-color: rgba(0,0,0,0.2);
+}
+.account-container .facebook i,
+.account-container .google-plus i{
+	border-right:1px solid #fff;
+	padding-right:10px;
+	margin-right:10px;
+}
+.account-form .heading-bx p a{
+	color: var(--primary);
+	text-decoration: underline;
+	padding-bottom: 0px;
+}
+.heading-bx.left .title-head {
+    border-color: #f7b205;
+    margin-bottom: 10px;
+    margin-top: 0;
+    line-height: 32px;
+    padding-left: 10px;
+    border-left: 5px solid #A00e09;
+    font-weight: 800;
+}
+.heading-bx {
+    margin-bottom: 40px;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.courses-search-bx .input-group, .contact-bx .input-group {
+    display: block;
+    position: relative;
+}
+.input-group{
+    width: 100%;
+}
+.courses-search-bx .input-group label, .contact-bx .input-group label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #606060;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.courses-search-bx .input-group .form-control, .contact-bx .input-group .form-control {
+    border-width: 0 0 1px 0;
+    background-color: rgba(0,0,0,0);
+    padding: 10px 0;
+}
+.courses-search-bx .input-group .form-control, .contact-bx .input-group .form-control, .courses-search-bx .input-group label, .contact-bx .input-group label {
+    width: 100%;
+}
+.courses-search-bx .focused .input-group label, .contact-bx .focused .input-group label {
+    top: -8px;
+    font-size: 10px;
+    color: #A00e09;
+}
+/* error */
+.error-page{
+	text-align:center;
+}
+.error-title{
+	font-size:140px;
+	line-height: 140px;
+	margin-bottom: 0;
+}
+.error-page h3{
+	font-size: 50px;
+    opacity: 0.2;
+}
+.error-page h5{
+	font-size: 22px;
+	opacity: 1;
+	font-weight: 500;
+	line-height: 35px;
+}
+.error-page p{
+	font-size:16px;
+	line-height:26px;
+}
+@media only screen and (max-width: 1200px) {
+    .account-head{
+		width: 350px;
+		min-width: 350px;
+	}
+}
+@media only screen and (max-width: 991px) {
+    .account-head {
+		width: 100%;
+		min-width: 100%;
+		height: 200px;
+	}
+	.account-form {
+		display: block;
+	}
+	.account-container{
+		padding: 50px 20px;
+	}
+}
+@media only screen and (max-width: 767px) {
+
+}

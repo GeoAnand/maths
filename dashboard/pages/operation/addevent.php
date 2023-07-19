@@ -1,0 +1,297 @@
+<?php
+include("../../header.php");
+?>
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="">
+              
+			  
+			  
+			  
+			  <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Add Events</h2>
+          
+                    <div class="clearfix"></div>
+                  </div>
+				 
+
+
+	<?php if(isset($_GET['msg']) && $_GET['msg']=='success'){ ?>			 
+				<div class="alert alert-success alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onClick="myfunc();">×</span>
+                    </button>
+                    <strong>Success!</strong> Form added.
+                </div>
+	<?php }else if(isset($_GET['msg']) && $_GET['msg']=='error'){ ?>
+				<div class="alert alert-danger alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onClick="myfunc();">×</span>
+                    </button>
+                    <strong>Error!</strong> Form not submitted.
+                </div>
+	<?php } ?>
+	
+	
+
+                  <div class="x_content">
+                    <br />
+                   <!-- <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">-->
+					
+					<form id="from1" name="from1" enctype="multipart/form-data"  action="<?php echo $home_path;?>/pages/operation/action/addevent.php" method="post" class="form-horizontal form-label-left" style="" autocomplete="off">
+					    
+<div class="col-md-4">					    
+					    
+ <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name">Event Category Name <span class="required" >*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">				    
+  <select name="ecat" id="ecat" class="form-control col-md-7 col-xs-12 select2"  onchange="selCHg();">
+<option value="">-- Select Category Name --</option>
+<?php $sql =  "select * from eventcat_math order by id asc";
+$val = mysqli_query($conn,$sql);
+while($fetch=mysqli_fetch_array($val))
+{ 
+?>
+
+<option value="<?=$fetch['ename']?>"><?=$fetch['ename']?></option>
+<?php  } ?>
+</select>
+</div>
+</div>
+		
+		
+		
+	<div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name">Event Type <span class="required" >*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">				    
+  <select name="etype" id="etype" class="form-control col-md-7 col-xs-12 select2"  onchange="selCHg();">
+<option value="">-- Select Event Type--</option>
+
+
+<option value="Upcoming Event">Upcoming Event</option>
+<option value="Past Event">Past Event</option>
+
+</select>
+</div>
+</div>	
+		
+	 <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="first-name"> Event Title <span class="required" >*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="text" id="ename" name="ename" required="required" class="form-control col-md-7 col-xs-12" autofocus>
+                        </div>
+                      </div>
+                      
+                     <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Image</label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="file" id="img1" name="img1" accept=".png, .jpg, .jpeg" class="form-control col-md-7 col-xs-12">
+						 
+                        </div>
+                      </div> 
+                      
+                      
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">PDF of Talk</label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="file" id="img" name="img"  class="form-control col-md-7 col-xs-12">
+						 
+                        </div>
+                      </div>
+                        
+    
+                       <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Speakers/Key Speakers
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="spe" name="spe"  class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div>
+                      
+                     <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Date
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="date" id="dat" name="dat"  class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>  
+                      
+                      
+                      <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Abstract (paragraph1)
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="ab1" name="ab1" class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div> 
+                      	
+		
+</div>	
+
+
+<div class="col-md-4">
+    
+   
+                      
+                      
+                        
+                      
+                       <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Abstract (paragraph2)
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="ab2" name="ab2" class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div>
+                      
+                      
+                       <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">About the Speaker (paragraph1)
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="sp1" name="sp1" class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div>
+    
+     <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">About the Speaker (paragraph2)
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="sp2" name="sp2" class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div>
+                      
+                      
+           <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Guests
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="guest" name="guest" class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div>           
+                      
+       <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Place
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="text" id="place" name="place"  class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+    
+    </div>
+
+
+					    
+	<div class="col-md-4">	
+
+                     
+                      
+                     
+                      
+                      
+                     
+                      
+                      
+                       <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Start Time
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="text" id="st" name="st"  class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                   
+                      
+                       <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">End Time
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="text" id="et" name="et"  class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      
+                        
+                       <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">External Link name
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="text" id="elname" name="elname"  class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      
+                     <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">External Link 
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <input type="text" id="el" name="el"  class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      
+                      
+                      <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">References
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="ref" name="ref" class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div>
+                      
+                      
+                     <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Organizing Committee
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="oc" name="oc" class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div> 
+                      
+                      
+                      <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-3 col-xs-12" for="last-name">Topics
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                          <textarea id="top" name="top" class="form-control col-md-7 col-xs-12"></textarea>
+                        </div>
+                      </div> 
+                      
+                      
+                      
+                      
+           </div>           
+                      
+<div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+						
+                           <button type="submit" class="btn btn-success">Submit</button>
+						   <a href="<?php echo $home_path; ?>/pages/operation/viewevent.php"><button class="btn btn-primary" type="button">VIew</button></a>
+						   
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+			  
+			  
+			  
+			  
+			  
+			  
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+		<script>
+		function myfunc(){
+			document.location.href="<?php echo $home_path; ?>/pages/master/addpost.php?id=<?php echo $_GET['id']; ?>"
+			
+		}
+		</script>
+<?php
+include("../../footer.php");
+?>
